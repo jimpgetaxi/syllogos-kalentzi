@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kalentzi-green': '#1a4d2e',
+                        'kalentzi-orange': '#d97757',
+                        'kalentzi-bg': '#f9f9f7',
+                        'kalentzi-text': '#2c3e50',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Roboto"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-kalentzi-bg text-kalentzi-text font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-mountain text-kalentzi-green text-3xl mr-3"></i>
+                    <span class="font-serif font-bold text-xl sm:text-2xl text-kalentzi-green">Σύλλογος Καλέντζι</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-kalentzi-orange transition">Ιστορικό</a>
+                    <a href="#actions" class="hover:text-kalentzi-orange transition">Δράσεις</a>
+                    <a href="#finance" class="hover:text-kalentzi-orange transition">Οικονομικά</a>
+                    <a href="#elections" class="text-kalentzi-orange font-bold border border-kalentzi-orange px-4 py-2 rounded-full hover:bg-kalentzi-orange hover:text-white transition">Εκλογές 2026</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-kalentzi-green hover:text-kalentzi-orange focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#about" class="block py-3 px-4 hover:bg-gray-100">Ιστορικό</a>
+            <a href="#actions" class="block py-3 px-4 hover:bg-gray-100">Δράσεις</a>
+            <a href="#finance" class="block py-3 px-4 hover:bg-gray-100">Οικονομικά</a>
+            <a href="#elections" class="block py-3 px-4 text-kalentzi-orange font-bold">Εκλογές 2026</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-kalentzi-green text-white pt-32 pb-20 px-4 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6">Πολιτιστικός Φυσιολατρικός Σύλλογος <br>Καλέντζι Αχαΐας</h1>
+            <p class="text-xl md:text-2xl italic mb-10 opacity-90">«Ένα ενωμένο χωριό είναι ένα ζωντανό χωριό»</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#join" class="bg-kalentzi-orange text-white px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition shadow-lg">
+                    Γίνε Μέλος (10€)
+                </a>
+                <a href="#elections" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-kalentzi-green transition">
+                    Μάθε για τις Εκλογές
+                </a>
+            </div>
+        </div>
+        <!-- Mountain Shape Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-kalentzi-bg"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Timeline / History Section -->
+    <section id="about" class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-3xl font-bold text-kalentzi-green mb-4">Από το Μηδέν στη Νομιμότητα</h2>
+            <div class="w-24 h-1 bg-kalentzi-orange mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="relative p-6 bg-white rounded-xl shadow-sm border-t-4 border-kalentzi-green">
+                <div class="text-kalentzi-orange font-bold text-xl mb-2">1η Μαΐου</div>
+                <p class="text-gray-600">Υπογραφή Καταστατικού</p>
+            </div>
+            <div class="relative p-6 bg-white rounded-xl shadow-sm border-t-4 border-kalentzi-green">
+                <div class="text-kalentzi-orange font-bold text-xl mb-2">16 Ιουνίου</div>
+                <p class="text-gray-600">Έγκριση από Πρωτοδικείο</p>
+            </div>
+            <div class="relative p-6 bg-white rounded-xl shadow-sm border-t-4 border-kalentzi-green">
+                <div class="text-kalentzi-orange font-bold text-xl mb-2">Αύγουστος</div>
+                <p class="text-gray-600">Παραχώρηση έδρας από τον Δήμο (Πλ. Παπανδρέου)</p>
+            </div>
+            <div class="relative p-6 bg-white rounded-xl shadow-sm border-t-4 border-kalentzi-orange">
+                <div class="text-kalentzi-orange font-bold text-xl mb-2">Οκτ-Νοέμ</div>
+                <p class="text-gray-600">Απόκτηση ΑΦΜ & Εγγραφή στο Μητρώο</p>
+            </div>
+        </div>
+        <div class="mt-8 bg-green-50 p-4 rounded-lg text-center border border-green-200">
+            <i class="fa-solid fa-check-circle text-kalentzi-green mr-2"></i>
+            <span class="font-bold text-kalentzi-green">Ο Σύλλογος είναι πλήρως αναγνωρισμένος, με σφραγίδα της Ελληνικής Δημοκρατίας.</span>
+        </div>
+    </section>
+
+    <!-- 2025 Actions Grid -->
+    <section id="actions" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl font-bold text-kalentzi-green mb-4">Οι Δράσεις μας το 2025</h2>
+                <p class="text-gray-600">Η πρώτη μας δυναμική παρουσία</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Action 1 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalentzi-orange transition duration-300">
+                        <i class="fa-solid fa-utensils text-3xl text-kalentzi-orange group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Σκαλτσοτιτέικα</h3>
+                    <p class="text-sm text-gray-500 mb-2">Σεπτέμβριος</p>
+                    <p class="text-gray-700">Συμμετοχή στην Αγροτική Έκθεση με μαγειρική και προβολή στα τοπικά μέσα.</p>
+                </div>
+                <!-- Action 2 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalentzi-orange transition duration-300">
+                        <i class="fa-solid fa-bullseye text-3xl text-kalentzi-orange group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Τοξοβολία</h3>
+                    <p class="text-sm text-gray-500 mb-2">Οκτώβριος</p>
+                    <p class="text-gray-700">Εκδήλωση σε συνεργασία με το σωματείο 'Πέλοπας'.</p>
+                </div>
+                <!-- Action 3 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalentzi-orange transition duration-300">
+                        <i class="fa-solid fa-gift text-3xl text-kalentzi-orange group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Χριστούγεννα</h3>
+                    <p class="text-sm text-gray-500 mb-2">Δεκέμβριος</p>
+                    <p class="text-gray-700">Εορταστικό γεύμα – Η πρώτη μεγάλη συγκέντρωση συγχωριανών.</p>
+                </div>
+                <!-- Action 4 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-kalentzi-orange transition duration-300">
+                        <i class="fa-solid fa-basketball text-3xl text-kalentzi-orange group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Τουρνουά 3x3</h3>
+                    <p class="text-sm text-gray-500 mb-2">Καλοκαίρι</p>
+                    <p class="text-gray-700">Συμμετοχή στο τουρνουά μπάσκετ στο Καλούσι.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financials & 2026 Budget -->
+    <section id="finance" class="py-16 bg-kalentzi-bg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 2025 Review -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="font-serif text-2xl font-bold text-kalentzi-green mb-6 border-b pb-2">Απολογισμός 2025</h3>
+                    <div class="grid grid-cols-2 gap-6 text-center mb-6">
+                        <div>
+                            <span class="block text-3xl font-bold text-kalentzi-green">57</span>
+                            <span class="text-gray-500 text-sm">Εγγεγραμμένα Μέλη</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-bold text-green-600">1.220€</span>
+                            <span class="text-gray-500 text-sm">Έσοδα</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center bg-gray-50 p-4 rounded mb-2">
+                        <span>Έξοδα:</span>
+                        <span class="font-bold text-red-500">968,62€</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-green-50 p-4 rounded border border-green-200">
+                        <span class="font-bold text-kalentzi-green">Ταμείο (Υπόλοιπο):</span>
+                        <span class="font-bold text-kalentzi-green text-xl">251,38€</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-4">*Σημείωση: Περιλαμβάνει νομικά έξοδα, αγορά βιβλίων και το πρόστιμο ΔΟΥ (υπό ένσταση).</p>
+                </div>
+
+                <!-- 2026 Goals -->
+                <div class="bg-kalentzi-green text-white p-8 rounded-xl shadow-md">
+                    <h3 class="font-serif text-2xl font-bold mb-6 border-b border-green-700 pb-2">Στόχοι 2026</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Προβλεπόμενα Έσοδα</span>
+                                <span class="font-bold">~1000€</span>
+                            </div>
+                            <div class="w-full bg-green-800 rounded-full h-2">
+                                <div class="bg-green-400 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                            <p class="text-xs text-green-200 mt-1">Συνδρομές, Χορηγίες, Λαχειοφόρος, Δήμος</p>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-bold text-kalentzi-orange mb-2">Πού θα δοθούν τα χρήματα:</h4>
+                            <ul class="list-disc list-inside space-y-2 text-sm text-gray-100">
+                                <li>Εκδηλώσεις / Θέαμα (Καραγκιόζης)</li>
+                                <li>Καλλωπισμός Χωριού (Χρώματα, φυτά)</li>
+                                <li>Εθιμοτυπία & Φιλοξενία</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Issues Section -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-3xl font-bold text-kalentzi-green">Οι Προκλήσεις του Χωριού</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Hotel -->
+            <div class="border rounded-xl p-6 hover:shadow-lg transition">
+                <div class="text-kalentzi-orange text-4xl mb-4"><i class="fa-solid fa-hotel"></i></div>
+                <h3 class="font-bold text-xl mb-2">Ξενοδοχείο</h3>
+                <p class="text-gray-600 text-sm mb-4">Ιδιοκτησία ΕΤΑΔ. Μη βιώσιμο οικονομικά για τον Σύλλογο (απαιτείται επένδυση ~700k€).</p>
+                <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Ανάγκη Ιδιώτη Επενδυτή</span>
+            </div>
+            <!-- School -->
+            <div class="border rounded-xl p-6 hover:shadow-lg transition">
+                <div class="text-kalentzi-orange text-4xl mb-4"><i class="fa-solid fa-school-flag"></i></div>
+                <h3 class="font-bold text-xl mb-2">Παλιό Σχολείο</h3>
+                <p class="text-gray-600 text-sm mb-4">Ιδιοκτησία Εκκλησίας. Κτίριο επικίνδυνο/κατεδαφιστέο. Πίεση σε Μητρόπολη & Δήμο για λύση.</p>
+                <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">Θέμα Ασφάλειας</span>
+            </div>
+            <!-- Forest -->
+            <div class="border rounded-xl p-6 hover:shadow-lg transition">
+                <div class="text-kalentzi-orange text-4xl mb-4"><i class="fa-solid fa-tree"></i></div>
+                <h3 class="font-bold text-xl mb-2">Ελατοδάσος</h3>
+                <p class="text-gray-600 text-sm mb-4">Πρόβλημα ξηρασίας και ασθένειας. Συνεργασία με Δασαρχείο για καθαρισμό περιμετρικά.</p>
+                <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Περιβάλλον</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELECTIONS SECTION (Highlighted) -->
+    <section id="elections" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="relative max-w-5xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-kalentzi-orange mb-6">Εκλογές 2026</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Η προσωρινή διοίκηση ολοκλήρωσε το έργο της. Τώρα χρειαζόμαστε μόνιμο Διοικητικό Συμβούλιο. <br><span class="text-kalentzi-orange font-bold">Ανάγκη να μπουν νέοι άνθρωποι μπροστά.</span></p>
+            
+            <div class="bg-white text-gray-900 rounded-xl p-8 shadow-2xl max-w-3xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <!-- Date -->
+                    <div class="text-center md:text-left">
+                        <div class="text-sm text-gray-500 uppercase tracking-wide font-bold">Στοχος Διεξαγωγης</div>
+                        <div class="text-4xl font-bold text-kalentzi-green">10 - 20 Αυγούστου</div>
+                        <p class="text-sm text-gray-600 mt-2">Περίοδος μέγιστης επισκεψιμότητας</p>
+                    </div>
+                    
+                    <!-- Requirements -->
+                    <div class="flex-1 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <ul class="text-left space-y-2">
+                            <li class="flex items-center"><i class="fa-solid fa-users text-kalentzi-orange mr-2"></i> 6 Τακτικά Μέλη (Δ.Σ.)</li>
+                            <li class="flex items-center"><i class="fa-solid fa-magnifying-glass-dollar text-kalentzi-orange mr-2"></i> 3 Μέλη Εξελεγκτικής</li>
+                            <li class="flex items-center"><i class="fa-solid fa-calendar-check text-kalentzi-orange mr-2"></i> Θητεία: 2 Έτη</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <p class="font-bold text-lg mb-4">Επίσημη προκήρυξη: Ιούνιος 2026</p>
+                    <a href="#join" class="inline-block bg-kalentzi-green text-white px-8 py-3 rounded-lg font-bold hover:bg-green-800 transition">Δήλωσε Ενδιαφέρον</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Footer -->
+    <section id="join" class="py-16 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="font-serif text-3xl font-bold text-kalentzi-green mb-8">Επόμενα Βήματα</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <div class="w-12 h-12 bg-kalentzi-orange text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold mb-2">Εγγραφή Μελών</h3>
+                    <p class="text-gray-600">Ετήσια συνδρομή 10€.</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-kalentzi-orange text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold mb-2">Υποψηφιότητες</h3>
+                    <p class="text-gray-600">Αναζήτηση υποψηφίων για το καλοκαίρι.</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-kalentzi-orange text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold mb-2">Εθελοντισμός</h3>
+                    <p class="text-gray-600">Βοήθεια σε εργασίες καλλωπισμού.</p>
+                </div>
+            </div>
+            
+            <div class="bg-gray-100 p-8 rounded-xl">
+                <h3 class="font-bold text-xl mb-4">Φόρμα Επικοινωνίας / Εγγραφής</h3>
+                <form class="max-w-md mx-auto space-y-4">
+                    <input type="text" placeholder="Ονοματεπώνυμο" class="w-full px-4 py-2 rounded border focus:outline-none focus:border-kalentzi-green">
+                    <input type="email" placeholder="Email ή Τηλέφωνο" class="w-full px-4 py-2 rounded border focus:outline-none focus:border-kalentzi-green">
+                    <textarea placeholder="Μήνυμα (π.χ. Ενδιαφέρομαι για εγγραφή)" class="w-full px-4 py-2 rounded border focus:outline-none focus:border-kalentzi-green h-32"></textarea>
+                    <button type="button" class="w-full bg-kalentzi-green text-white font-bold py-3 rounded hover:bg-green-800 transition">Αποστολή</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-kalentzi-green text-white py-8 text-center">
+        <p class="font-serif italic text-lg mb-4">"Η Κληρονομιά του Παλαιού Συλλόγου περνάει στη Νέα Εποχή"</p>
+        <p class="text-sm opacity-70">&copy; 2026 Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
