@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Φωτογραφίες - Σύλλογος Καλέντζι</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'brand-green': '#1a4d2e', 'brand-gold': '#c5a059', 'brand-light': '#f3f4f6' },
+                    fontFamily: { 'serif': ['"Playfair Display"', 'serif'], 'sans': ['"Manrope"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- ΙΔΙΟ MENU -->
+    <nav class="sticky top-0 bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <i class="fa-solid fa-mountain-sun text-brand-green text-3xl"></i>
+                    <span class="font-serif font-bold text-xl text-brand-green">Σύλλογος Καλέντζι</span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
+                    <a href="index.html" class="hover:text-brand-green transition text-gray-600">Αρχική</a>
+                    <a href="identity.html" class="hover:text-brand-green transition text-gray-600">Ταυτότητα</a>
+                    <a href="gallery.html" class="text-brand-green border-b-2 border-brand-green pb-1">Φωτογραφίες</a>
+                    <a href="contact.html" class="bg-brand-green text-white px-4 py-2 rounded hover:bg-green-800 transition">Εγγραφή</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gray-100 py-12 text-center border-b">
+        <h1 class="font-serif text-3xl font-bold text-brand-green mb-2">Φωτογραφικό Λεύκωμα</h1>
+        <p class="text-gray-500">Στιγμές και τοπία από το Καλέντζι</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Photo 1 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-w-4 aspect-h-3">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="text-white font-bold border border-white px-4 py-2">Τοπία</span>
+                </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="text-white font-bold border border-white px-4 py-2">Εκδηλώσεις</span>
+                </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="text-white font-bold border border-white px-4 py-2">Φύση</span>
+                </div>
+            </div>
+
+            <!-- Photo 4 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="text-white font-bold border border-white px-4 py-2">Το Χωριό</span>
+                </div>
+            </div>
+
+            <!-- Photo 5 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1501854140884-074cf272432d?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="text-white font-bold border border-white px-4 py-2">Δραστηριότητες</span>
+                </div>
+            </div>
+
+            <!-- Photo 6 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                    <span class="text-white font-bold border border-white px-4 py-2">Ιστορία</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 text-center mt-auto">
+        <p class="text-sm opacity-70">&copy; 2026 Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας.</p>
+    </footer>
+
+</body>
+</html>

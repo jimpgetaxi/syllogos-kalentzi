@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ταυτότητα - Σύλλογος Καλέντζι</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'brand-green': '#1a4d2e', 'brand-gold': '#c5a059', 'brand-light': '#f3f4f6' },
+                    fontFamily: { 'serif': ['"Playfair Display"', 'serif'], 'sans': ['"Manrope"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- ΙΔΙΟ TOP BAR & MENU ΟΠΩΣ ΤΟ INDEX -->
+    <nav class="sticky top-0 bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <i class="fa-solid fa-mountain-sun text-brand-green text-3xl"></i>
+                    <span class="font-serif font-bold text-xl text-brand-green">Σύλλογος Καλέντζι</span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
+                    <a href="index.html" class="hover:text-brand-green transition text-gray-600">Αρχική</a>
+                    <a href="identity.html" class="text-brand-green border-b-2 border-brand-green pb-1">Ταυτότητα</a>
+                    <a href="gallery.html" class="hover:text-brand-green transition text-gray-600">Φωτογραφίες</a>
+                    <a href="contact.html" class="bg-brand-green text-white px-4 py-2 rounded hover:bg-green-800 transition">Εγγραφή</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Σελίδας -->
+    <header class="bg-brand-green text-white py-16 text-center">
+        <h1 class="font-serif text-4xl font-bold mb-2">Ποιοι Είμαστε</h1>
+        <p class="opacity-80">Η ιστορία, οι άνθρωποι και το όραμά μας</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-16">
+        
+        <!-- Σκοπός -->
+        <section class="mb-20 text-center max-w-3xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-brand-green mb-6">Το Όραμά μας</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Ο Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας ιδρύθηκε με σκοπό την αναβίωση του χωριού μας, 
+                την προστασία του μοναδικού φυσικού πλούτου του Ερυμάνθου και τη σύσφιξη των σχέσεων μεταξύ των απανταχού συγχωριανών. 
+                Πιστεύουμε ότι <strong>«Ένα ενωμένο χωριό είναι ένα ζωντανό χωριό»</strong>.
+            </p>
+        </section>
+
+        <!-- Χρονολόγιο (Timeline) -->
+        <section class="mb-20">
+            <h2 class="font-serif text-2xl font-bold text-brand-green mb-10 text-center">Ιστορική Αναδρομή Ίδρύσης</h2>
+            <div class="border-l-4 border-brand-gold ml-4 md:ml-auto md:max-w-2xl space-y-10 pl-8 relative">
+                
+                <div class="relative">
+                    <span class="absolute -left-[42px] top-0 w-5 h-5 rounded-full bg-brand-green border-4 border-white"></span>
+                    <h3 class="font-bold text-xl text-brand-green">1η Μαΐου</h3>
+                    <p class="text-gray-600">Υπογραφή Καταστατικού του Συλλόγου.</p>
+                </div>
+                
+                <div class="relative">
+                    <span class="absolute -left-[42px] top-0 w-5 h-5 rounded-full bg-brand-green border-4 border-white"></span>
+                    <h3 class="font-bold text-xl text-brand-green">16 Ιουνίου</h3>
+                    <p class="text-gray-600">Επίσημη Έγκριση από το Πρωτοδικείο.</p>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[42px] top-0 w-5 h-5 rounded-full bg-brand-green border-4 border-white"></span>
+                    <h3 class="font-bold text-xl text-brand-green">Αύγουστος</h3>
+                    <p class="text-gray-600">Παραχώρηση έδρας από τον Δήμο στην Πλατεία Α. Παπανδρέου.</p>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[42px] top-0 w-5 h-5 rounded-full bg-brand-green border-4 border-white"></span>
+                    <h3 class="font-bold text-xl text-brand-green">Οκτώβριος - Νοέμβριος</h3>
+                    <p class="text-gray-600">Απόκτηση ΑΦΜ & Εγγραφή στο Μητρώο Περιφέρειας. Πλήρης Νομιμοποίηση.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Διοικητικό Συμβούλιο -->
+        <section class="bg-brand-light p-10 rounded-xl">
+            <h2 class="font-serif text-2xl font-bold text-brand-green mb-8 text-center">Διοικητικό Συμβούλιο</h2>
+            <!-- Εδώ βάζεις τα πραγματικά ονόματα όταν γίνουν οι εκλογές -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-6 rounded shadow-sm">
+                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center"><i class="fa-solid fa-user text-gray-400"></i></div>
+                    <h4 class="font-bold">Όνομα Επίθετο</h4>
+                    <span class="text-sm text-brand-gold uppercase font-bold">Προεδρος</span>
+                </div>
+                <div class="bg-white p-6 rounded shadow-sm">
+                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center"><i class="fa-solid fa-user text-gray-400"></i></div>
+                    <h4 class="font-bold">Όνομα Επίθετο</h4>
+                    <span class="text-sm text-brand-gold uppercase font-bold">Γραμματεας</span>
+                </div>
+                <div class="bg-white p-6 rounded shadow-sm">
+                    <div class="w-20 h-20 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center"><i class="fa-solid fa-user text-gray-400"></i></div>
+                    <h4 class="font-bold">Όνομα Επίθετο</h4>
+                    <span class="text-sm text-brand-gold uppercase font-bold">Ταμιας</span>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 mt-8 text-sm">* Η σύνθεση του Δ.Σ. θα ανανεωθεί μετά τις εκλογές του Αυγούστου 2026.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer (ΙΔΙΟ) -->
+    <footer class="bg-gray-900 text-white py-8 text-center mt-auto">
+        <p class="text-sm opacity-70">&copy; 2026 Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας.</p>
+    </footer>
+
+</body>
+</html>
