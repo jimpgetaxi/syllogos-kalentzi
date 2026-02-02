@@ -4,25 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας</title>
-    
-    <!-- Tailwind CSS (Styling) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts (Playfair Display & Manrope) -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Manrope:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom Theme Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-green': '#1a4d2e', // Το βασικό πράσινο του συλλόγου
-                        'brand-gold': '#c5a059',  // Χρώμα έμφασης (χρυσό/μπεζ)
-                        'brand-light': '#f3f4f6', // Ανοιχτό γκρι για φόντο
+                        'brand-green': '#1a4d2e', 
+                        'brand-gold': '#c5a059',
+                        'brand-light': '#f3f4f6',
+                        'brand-dark': '#0f291e',
                     },
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
@@ -35,11 +28,10 @@
 </head>
 <body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
-    <!-- TOP BAR: Πληροφορίες & Social Media (Εμφανίζεται μόνο σε υπολογιστές) -->
+    <!-- TOP BAR -->
     <div class="bg-brand-green text-white text-xs py-2 hidden md:block border-b border-green-800">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="flex space-x-6">
-                <!-- Αντικαταστήστε με τα πραγματικά στοιχεία -->
                 <span><i class="fa-solid fa-phone mr-2"></i>69XX XXX XXX</span>
                 <span><i class="fa-solid fa-envelope mr-2"></i>info@kalentzi-syllogos.gr</span>
             </div>
@@ -51,11 +43,10 @@
         </div>
     </div>
 
-    <!-- MAIN NAVIGATION: Μενού Πλοήγησης -->
+    <!-- MAIN MENU -->
     <nav class="sticky top-0 bg-white shadow-lg z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo & Όνομα -->
                 <a href="index.html" class="flex items-center gap-3 group">
                     <i class="fa-solid fa-mountain-sun text-brand-green text-3xl group-hover:scale-110 transition duration-300"></i>
                     <div class="flex flex-col">
@@ -64,214 +55,207 @@
                     </div>
                 </a>
                 
-                <!-- Desktop Menu Links -->
                 <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide items-center">
                     <a href="index.html" class="text-brand-green border-b-2 border-brand-green pb-1">Αρχική</a>
                     <a href="identity.html" class="hover:text-brand-green transition text-gray-600">Ταυτότητα</a>
+                    <!-- ΝΕΟ: Dropdown logic simulation for sightseeing -->
                     <a href="gallery.html" class="hover:text-brand-green transition text-gray-600">Φωτογραφίες</a>
                     <a href="contact.html" class="bg-brand-green text-white px-5 py-2.5 rounded hover:bg-green-800 transition shadow-md hover:shadow-lg">Εγγραφή</a>
                 </div>
 
-                <!-- Mobile Menu Button (Hamburger) -->
                 <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-brand-green text-2xl focus:outline-none">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
-        
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t p-4 space-y-4 shadow-inner">
             <a href="index.html" class="block font-bold text-brand-green pl-2 border-l-4 border-brand-green">Αρχική</a>
-            <a href="identity.html" class="block text-gray-600 pl-3 hover:text-brand-green">Ταυτότητα & Ιστορικό</a>
-            <a href="gallery.html" class="block text-gray-600 pl-3 hover:text-brand-green">Φωτογραφίες</a>
-            <a href="contact.html" class="block text-white bg-brand-green text-center py-2 rounded">Εγγραφή Μέλους</a>
+            <a href="identity.html" class="block text-gray-600 pl-3">Ταυτότητα</a>
+            <a href="gallery.html" class="block text-gray-600 pl-3">Φωτογραφίες</a>
+            <a href="contact.html" class="block text-white bg-brand-green text-center py-2 rounded">Εγγραφή</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION: Μεγάλη Εικόνα & Κείμενο -->
-    <header class="relative h-[600px] flex items-center justify-center text-center px-4 overflow-hidden">
-        <!-- Background Image with Overlay -->
+    <!-- HERO SECTION -->
+    <header class="relative h-[650px] flex items-center justify-center text-center px-4 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <!-- ΣΗΜΕΙΩΣΗ: Αλλάξτε το src με τη δική σας φωτογραφία (π.χ. 'kalentzi-view.jpg') -->
-            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
+            <img src="https://images.unsplash.com/photo-1518242090159-8260742a78de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" 
                  alt="Καλέντζι Αχαΐας" 
                  class="w-full h-full object-cover brightness-50">
         </div>
-        
-        <!-- Hero Content -->
         <div class="relative z-10 max-w-4xl mx-auto text-white">
-            <div class="animate-fade-in-up">
-                <span class="inline-block py-1 px-4 border border-white/40 rounded-full text-xs md:text-sm mb-6 uppercase tracking-widest backdrop-blur-md bg-white/10">
-                    Καλώς ήρθατε στον τόπο μας
-                </span>
-                <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
-                    Ζωντανεύουμε<br>την Παράδοση
-                </h1>
-                <p class="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto font-light">
-                    Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας "Ο Ερύμανθος".<br>
-                    Ενώνουμε το χθες με το αύριο.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="identity.html" class="bg-brand-gold text-brand-green font-bold px-8 py-3 rounded hover:bg-white hover:scale-105 transition duration-300 shadow-lg">
-                        Μάθετε για εμάς
-                    </a>
-                    <a href="contact.html" class="bg-transparent border border-white text-white font-bold px-8 py-3 rounded hover:bg-white hover:text-brand-green transition duration-300">
-                        Επικοινωνία
-                    </a>
-                </div>
+            <span class="inline-block py-1 px-4 border border-white/40 rounded-full text-xs md:text-sm mb-6 uppercase tracking-widest backdrop-blur-md bg-white/10">
+                Ερυμανθος - Αχαια
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
+                Η καρδιά του βουνού<br>χτυπάει εδώ
+            </h1>
+            <p class="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto font-light">
+                Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι.<br>
+                Διατηρούμε την κληρονομιά, προστατεύουμε το ελατοδάσος.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#sights" class="bg-brand-gold text-brand-green font-bold px-8 py-3 rounded hover:bg-white transition duration-300 shadow-lg">
+                    Γνωρίστε το χωριό
+                </a>
+                <a href="contact.html" class="bg-transparent border border-white text-white font-bold px-8 py-3 rounded hover:bg-white hover:text-brand-green transition duration-300">
+                    Γίνετε Μέλος
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- NEWS & EVENTS SECTION: Τελευταία Νέα -->
+    <!-- NEW SECTION: ΑΝΑΚΑΛΥΨΤΕ ΤΟ ΚΑΛΕΝΤΖΙ (Εμπνευσμένο από ellinikogortynias.gr) -->
+    <section id="sights" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-brand-gold font-bold uppercase tracking-widest text-sm">Οδηγος Επισκεπτη</span>
+            <h2 class="text-brand-green font-serif text-4xl font-bold mt-2">Ανακαλύψτε το Καλέντζι</h2>
+            <div class="w-20 h-1 bg-brand-green mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Sight 1 -->
+            <div class="group relative h-80 rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1448375240586-dfd8d3f5d8aa?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-white font-serif text-xl font-bold">Το Ελατοδάσος</h3>
+                    <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        Περπατήστε στα μονοπάτια του Ερυμάνθου.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sight 2 -->
+            <div class="group relative h-80 rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1548625361-e87dc073699b?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-white font-serif text-xl font-bold">Οι Εκκλησίες</h3>
+                    <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        Ιστορικά θρησκευτικά μνημεία και ξωκλήσια.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sight 3 -->
+            <div class="group relative h-80 rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1572097662444-46c59b207590?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-white font-serif text-xl font-bold">Η Πλατεία</h3>
+                    <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        Το σημείο συνάντησης, εκεί που χτυπά η καρδιά του χωριού.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sight 4 -->
+            <div class="group relative h-80 rounded-xl overflow-hidden cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-white font-serif text-xl font-bold">Διαμονή & Φαγητό</h3>
+                    <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        Παραδοσιακές γεύσεις και φιλοξενία.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEWS SECTION -->
     <section class="py-20 px-4 bg-brand-light">
         <div class="max-w-7xl mx-auto">
-            <!-- Section Title -->
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-300 pb-4">
                 <div>
-                    <h2 class="text-brand-green font-serif text-3xl font-bold relative">
-                        Τελευταία Νέα
-                        <span class="absolute -bottom-4 left-0 w-20 h-1 bg-brand-gold"></span>
-                    </h2>
-                    <p class="text-gray-500 mt-4">Οι δράσεις, οι εκδηλώσεις και οι ανακοινώσεις του συλλόγου μας.</p>
+                    <h2 class="text-brand-green font-serif text-3xl font-bold">Νέα & Ανακοινώσεις</h2>
+                    <p class="text-gray-500 mt-2">Μείνετε ενημερωμένοι για τις δράσεις μας</p>
                 </div>
                 <a href="#" class="hidden md:block text-brand-green font-bold hover:text-brand-gold transition mt-4 md:mt-0">
-                    Όλα τα νέα <i class="fa-solid fa-arrow-right ml-1 text-sm"></i>
+                    Όλα τα άρθρα <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
             </div>
 
-            <!-- News Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- News Card 1 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 group cursor-pointer h-full flex flex-col">
-                    <div class="overflow-hidden h-56 relative">
-                        <img src="https://images.unsplash.com/photo-1514525253440-b39345208668?auto=format&fit=crop&w=600&q=80" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                        <div class="absolute top-4 right-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded">
-                            ΕΚΔΗΛΩΣΕΙΣ
-                        </div>
+                <!-- News 1 -->
+                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514525253440-b39345208668?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6 flex-grow">
-                        <div class="text-xs text-gray-400 mb-2"><i class="fa-regular fa-calendar mr-1"></i> Φεβρουάριος 2026</div>
-                        <h3 class="font-serif text-xl font-bold mb-3 group-hover:text-brand-green transition">Κοπή Πρωτοχρονιάτικης Πίτας</h3>
-                        <p class="text-gray-500 text-sm line-clamp-3">
-                            Σας προσκαλούμε στην ετήσια εκδήλωση κοπής της πίτας του συλλόγου μας. Ελάτε να ανταλλάξουμε ευχές για το νέο έτος!
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0 border-t border-gray-100 mt-auto">
-                        <span class="text-brand-green text-sm font-bold group-hover:underline">Διαβάστε περισσότερα</span>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-gold font-bold uppercase">Εκδηλωσεις</span>
+                        <h3 class="font-serif text-lg font-bold mt-2 hover:text-brand-green cursor-pointer">Κοπή Πίτας 2026</h3>
+                        <p class="text-gray-500 text-sm mt-2 line-clamp-2">Η πρώτη μεγάλη συγκέντρωση των συγχωριανών μας για το νέο έτος...</p>
                     </div>
                 </article>
 
-                <!-- News Card 2 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 group cursor-pointer h-full flex flex-col">
-                    <div class="overflow-hidden h-56 relative">
-                        <img src="https://images.unsplash.com/photo-1541872703-74c5963631df?auto=format&fit=crop&w=600&q=80" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                        <div class="absolute top-4 right-4 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded">
-                            ΑΝΑΚΟΙΝΩΣΗ
-                        </div>
+                <!-- News 2 -->
+                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541872703-74c5963631df?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6 flex-grow">
-                        <div class="text-xs text-gray-400 mb-2"><i class="fa-regular fa-calendar mr-1"></i> Αύγουστος 2026</div>
-                        <h3 class="font-serif text-xl font-bold mb-3 group-hover:text-brand-green transition">Εκλογές Ανάδειξης Νέου Δ.Σ.</h3>
-                        <p class="text-gray-500 text-sm line-clamp-3">
-                            Ενημερώνουμε τα μέλη ότι οι εκλογές για την ανάδειξη του νέου μόνιμου Διοικητικού Συμβουλίου θα πραγματοποιηθούν τον Αύγουστο.
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0 border-t border-gray-100 mt-auto">
-                        <span class="text-brand-green text-sm font-bold group-hover:underline">Διαβάστε περισσότερα</span>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-gold font-bold uppercase">Συλλογος</span>
+                        <h3 class="font-serif text-lg font-bold mt-2 hover:text-brand-green cursor-pointer">Εκλογές Αυγούστου</h3>
+                        <p class="text-gray-500 text-sm mt-2 line-clamp-2">Προετοιμαζόμαστε για την ανάδειξη του πρώτου μόνιμου Διοικητικού Συμβουλίου...</p>
                     </div>
                 </article>
 
-                <!-- News Card 3 -->
-                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 group cursor-pointer h-full flex flex-col">
-                    <div class="overflow-hidden h-56 relative">
-                        <img src="https://images.unsplash.com/photo-1449824913929-49aa7649cc3b?auto=format&fit=crop&w=600&q=80" 
-                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                        <div class="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded">
-                            ΠΕΡΙΒΑΛΛΟΝ
-                        </div>
+                <!-- News 3 -->
+                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1449824913929-49aa7649cc3b?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6 flex-grow">
-                        <div class="text-xs text-gray-400 mb-2"><i class="fa-regular fa-calendar mr-1"></i> Μάιος 2026</div>
-                        <h3 class="font-serif text-xl font-bold mb-3 group-hover:text-brand-green transition">Δράση Καθαρισμού Ελατοδάσους</h3>
-                        <p class="text-gray-500 text-sm line-clamp-3">
-                            Μια υπέροχη πρωτοβουλία για τον καθαρισμό των μονοπατιών περιμετρικά του χωριού. Η συμμετοχή όλων είναι απαραίτητη.
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0 border-t border-gray-100 mt-auto">
-                        <span class="text-brand-green text-sm font-bold group-hover:underline">Διαβάστε περισσότερα</span>
+                    <div class="p-6">
+                        <span class="text-xs text-brand-gold font-bold uppercase">Εθελοντισμος</span>
+                        <h3 class="font-serif text-lg font-bold mt-2 hover:text-brand-green cursor-pointer">Καθαρισμός Μονοπατιών</h3>
+                        <p class="text-gray-500 text-sm mt-2 line-clamp-2">Δράση για την προστασία και ανάδειξη του φυσικού πλούτου του τόπου μας...</p>
                     </div>
                 </article>
-
             </div>
         </div>
     </section>
 
-    <!-- FOOTER: Υποσέλιδο -->
-    <footer class="bg-gray-900 text-white py-16 mt-auto border-t-4 border-brand-gold">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12">
-            
-            <!-- Column 1: About -->
-            <div>
-                <div class="flex items-center gap-2 mb-6">
-                    <i class="fa-solid fa-mountain-sun text-brand-gold text-2xl"></i>
-                    <h4 class="font-serif text-xl font-bold">Σύλλογος Καλέντζι</h4>
-                </div>
-                <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                    Ο πολιτιστικός φάρος του χωριού μας. Ενώνουμε τους απανταχού Καλεντζιώτες, προστατεύουμε τη φύση και διατηρούμε τις παραδόσεις μας ζωντανές.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-brand-green transition duration-300"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-brand-green transition duration-300"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
+    <!-- NEWSLETTER SECTION (Όπως στο ellinikogortynias) -->
+    <section class="bg-brand-dark text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <i class="fa-regular fa-paper-plane text-4xl mb-4 text-brand-gold"></i>
+            <h2 class="font-serif text-3xl font-bold mb-4">Μείνετε συντονισμένοι</h2>
+            <p class="text-gray-400 mb-8">Εγγραφείτε στο ενημερωτικό δελτίο του Συλλόγου για να μαθαίνετε πρώτοι τα νέα και τις εκδηλώσεις στο Καλέντζι.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Το email σας" class="flex-grow px-4 py-3 rounded text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                <button type="button" class="bg-brand-gold text-brand-dark font-bold px-6 py-3 rounded hover:bg-white transition">Εγγραφή</button>
+            </form>
+        </div>
+    </section>
 
-            <!-- Column 2: Contact Info -->
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+            <div class="md:col-span-2">
+                <h4 class="font-serif text-xl font-bold mb-4 text-brand-gold">Σύλλογος Καλέντζι</h4>
+                <p class="text-gray-400 leading-relaxed max-w-sm">
+                    Ο Σύλλογος έχει ως στόχο την πολιτιστική και πνευματική ανάπτυξη του τόπου μας, την προστασία του φυσικού περιβάλλοντος και τη σύσφιξη των σχέσεων των μελών του.
+                </p>
+            </div>
             <div>
-                <h4 class="font-serif text-xl font-bold mb-6 text-brand-gold relative inline-block">
-                    Επικοινωνία
-                    <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-white opacity-20"></span>
-                </h4>
-                <ul class="text-gray-400 text-sm space-y-4">
-                    <li class="flex items-start">
-                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-brand-gold"></i> 
-                        <span>Πλατεία Α. Παπανδρέου,<br>Καλέντζι Αχαΐας, 25015</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-envelope mr-3 text-brand-gold"></i> 
-                        <a href="mailto:info@kalentzi-syllogos.gr" class="hover:text-white transition">info@kalentzi-syllogos.gr</a>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-phone mr-3 text-brand-gold"></i> 
-                        <span>69XX XXX XXX</span>
-                    </li>
+                <h4 class="font-bold mb-4 text-white">Επικοινωνία</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><i class="fa-solid fa-location-dot mr-2"></i> Πλατεία Α. Παπανδρέου</li>
+                    <li><i class="fa-solid fa-envelope mr-2"></i> info@kalentzi-syllogos.gr</li>
+                    <li><i class="fa-solid fa-phone mr-2"></i> 69XX XXX XXX</li>
                 </ul>
             </div>
-            
-            <!-- Column 3: Quick Links -->
             <div>
-                <h4 class="font-serif text-xl font-bold mb-6 text-brand-gold relative inline-block">
-                    Χρήσιμοι Σύνδεσμοι
-                    <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-white opacity-20"></span>
-                </h4>
-                <ul class="text-gray-400 text-sm space-y-3">
-                    <li><a href="identity.html" class="hover:text-brand-gold hover:translate-x-1 inline-block transition transform">Ταυτότητα & Ιστορικό</a></li>
-                    <li><a href="gallery.html" class="hover:text-brand-gold hover:translate-x-1 inline-block transition transform">Φωτογραφικό Λεύκωμα</a></li>
-                    <li><a href="contact.html" class="hover:text-brand-gold hover:translate-x-1 inline-block transition transform">Φόρμα Εγγραφής</a></li>
-                    <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition transform">Δήμος Ερυμάνθου</a></li>
+                <h4 class="font-bold mb-4 text-white">Σύνδεσμοι</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="identity.html" class="hover:text-brand-gold">Ταυτότητα</a></li>
+                    <li><a href="gallery.html" class="hover:text-brand-gold">Φωτογραφίες</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-gold">Εγγραφή</a></li>
                 </ul>
             </div>
         </div>
-        
-        <!-- Copyright -->
-        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p class="text-gray-600 text-xs">
-                &copy; 2026 Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας. All rights reserved. <br>
-                <span class="opacity-50">Designed with respect to tradition.</span>
-            </p>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-gray-600 text-xs">
+            &copy; 2026 Πολιτιστικός Φυσιολατρικός Σύλλογος Καλέντζι Αχαΐας.
         </div>
     </footer>
 
